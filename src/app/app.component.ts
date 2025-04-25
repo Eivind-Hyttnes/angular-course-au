@@ -7,7 +7,7 @@ import { HeaderComponent } from './header.component';
   standalone: true,
   imports: [ HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'angular-course';

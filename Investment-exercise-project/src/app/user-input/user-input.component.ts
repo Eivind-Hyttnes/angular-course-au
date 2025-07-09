@@ -1,6 +1,6 @@
 import { FormsModule } from '@angular/forms';
 
-import { Component, output } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import type { Iinput } from '../input.model';
 
 @Component({
@@ -12,10 +12,10 @@ import type { Iinput } from '../input.model';
 })
 export class UserInputComponent {
   calculate = output<Iinput>();
-  enteredInitialInvestment = '0';
-  enteredAnnualContribution = '0';
-  enteredExpectedReturn = '5';
-  enteredInvestmentDuration = '10';
+  enteredInitialInvestment = signal('0');
+  enteredAnnualContribution = signal('0');
+  enteredExpectedReturn = signal('5');
+  enteredInvestmentDuration = signal('10');
 
   onSubmit() {
     this.calculate.emit({
@@ -24,5 +24,9 @@ export class UserInputComponent {
       expectedReturn: +this.enteredExpectedReturn,
       duration: +this.enteredInvestmentDuration,
     });
+    this.enteredInitialInvestment.set('0');
+    this.enteredAnnualContribution.set('0');
+    this.enteredExpectedReturn.set('5');
+    this.enteredInvestmentDuration.set('10');
   }
 }

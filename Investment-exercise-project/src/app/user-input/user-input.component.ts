@@ -1,7 +1,7 @@
 import { FormsModule } from '@angular/forms';
 
 import { Component, output } from '@angular/core';
-import type { Idata } from '../input.model';
+import type { Iinput } from '../input.model';
 
 @Component({
   selector: 'app-user-input',
@@ -11,7 +11,7 @@ import type { Idata } from '../input.model';
   styleUrl: './user-input.component.css',
 })
 export class UserInputComponent {
-  calculate = output<Idata>();
+  calculate = output<Iinput>();
   enteredInitialInvestment = '0';
   enteredAnnualContribution = '0';
   enteredExpectedReturn = '5';

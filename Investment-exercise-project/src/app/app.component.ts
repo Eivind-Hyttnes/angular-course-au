@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { IncestmentResultsComponent } from './incestment-results/incestment-results.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import type { Idata } from './input.model';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,7 @@ import { UserInputComponent } from './user-input/user-input.component';
   imports: [HeaderComponent, IncestmentResultsComponent, UserInputComponent],
 })
 export class AppComponent {
-  calculateInvestmentResults(data: {
-    initialInvestment: number,
-    duration: number,
-    expectedReturn: number,
-    annualInvestment: number,
-  }) {
+  calculateInvestmentResults(data: Idata) {
     const annualData = [];
     let investmentValue = data.initialInvestment;
 

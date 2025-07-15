@@ -9,5 +9,5 @@ import { Component, input } from '@angular/core';
 })
 export class DashboardItemComponent {
   image = input.required<{ src: string; alt: string }>();
-  title = input<string>();
+  title = input.required<string>();
 }

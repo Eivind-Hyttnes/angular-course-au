@@ -23,4 +23,8 @@ export class ServerStatusComponent implements OnInit {
       }
     }, 5000);
   }
+
+  ngAfterViewInit() {
+    console.log('ServerStatusComponent view initialized');
+  }
 }

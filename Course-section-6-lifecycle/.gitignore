@@ -40,17 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Compiled output
-/node_modules
-/.angular
-/Course-section-2-3/.angular
-/Course-section-2-3/node_modules
-/Course-section-4/.angular
-/Course-section-4/node_modules
-/Course-section-5/.angular
-/Course-section-5/node_modules
-/course-section-6/.angular
-/course-section-6/node_modules
-/course-section-6-lifecycle/.angular
-/course-section-6-lifecycle/node_modules

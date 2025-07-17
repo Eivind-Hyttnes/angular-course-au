@@ -5,8 +5,12 @@
 
   <app-auth />
 
-  @if (isAdmin()) {
+  <!-- @if (isAdmin()) {
     <p appAuth="admin">only admin</p>
-  }
+  } -->
   <!-- <p *ngIf="isAdmin()">only auth</p> -->
+
+  <ng-template appAuth="admin">
+    <p>Only admins should see this!</p>
+  </ng-template>
 </main>
